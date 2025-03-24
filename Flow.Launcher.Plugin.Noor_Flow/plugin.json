@@ -1,0 +1,12 @@
+{
+  "ID": "flow.launcher.Noor_Flow.csharp",
+  "ActionKeyword": "noor",
+  "Name": "Noor flow",
+  "Description": "Quickly & easily search for & extract islamic revelation while offline",
+  "Author": "O1Anas",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/O1Anas",
+  "ExecuteFileName": "bin\\Debug\\Flow.Launcher.Plugin.Noor_Flow.dll",
+  "IcoPath": "Images\\app.png"
+}

@@ -22,7 +22,7 @@ Check the [Usage heading](#usage) for a detailed feature showcase
 - Search for the plugin on the Flow Launcher app's plugin store and install it
 
 **Manual**:
-1. Download the latest release from the [Releases](https://github.com/O1Anas/Noor_Flow.FLP/releases) page
+1. Download the [latest release (.zip file)](https://github.com/O1Anas/Noor_Flow.FLP/releases/latest#:~:text=Flow.Launcher.Plugin.Noor_Flow.zip) from the [Releases](https://github.com/O1Anas/Noor_Flow.FLP/releases) page
 2. Extract the ZIP file to your Flow Launcher plugins directory:
    ```
    %APPDATA%\FlowLauncher\Plugins\

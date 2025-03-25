@@ -1,0 +1,55 @@
+name: Publish Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+    paths:
+      - 'Flow.Launcher.Plugin.Noor_Flow/plugin.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get version from plugin.json
+        id: version
+        run: |
+          $json = Get-Content -Raw -Path Flow.Launcher.Plugin.Noor_Flow/plugin.json | ConvertFrom-Json
+          echo "version=$($json.Version)" | Out-File -FilePath $env:GITHUB_ENV -Append
+
+      - name: Extract release notes
+        id: extract-release-notes
+        uses: ffurrer2/extract-release-notes@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+
+      - name: Restore dependencies
+        run: |
+          cd Flow.Launcher.Plugin.Noor_Flow
+          dotnet restore Flow.Launcher.Plugin.Noor.csproj
+
+      - name: Build and publish
+        run: |
+          cd Flow.Launcher.Plugin.Noor_Flow
+          dotnet publish Flow.Launcher.Plugin.Noor.csproj -c Release -r win-x64 --no-self-contained -o publish
+          Compress-Archive -Path publish\* -DestinationPath Flow.Launcher.Plugin.Noor_Flow.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: 'v${{ env.version }}'
+          body: '${{ steps.extract-release-notes.outputs.release_notes }}'
+          files: Flow.Launcher.Plugin.Noor_Flow/Flow.Launcher.Plugin.Noor_Flow.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

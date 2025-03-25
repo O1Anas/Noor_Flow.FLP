@@ -10,7 +10,7 @@ Noor Flow is a powerful Flow Launcher plugin designed to ease the search and ext
 - **Surah Search**: Quickly find any surah by number or name in Arabic or Latin
   - **Ayah Search**: Search ayahs using text 
     - and/or specific notations and formats (like `surah:ayah` e.g., `3:5`)
-- **Rich Context Menu**: Access additional options for each result (Surah or Ayah: Copy text, open in [quran.com](https://quran.com/) website, read translation [there](https://quran.com/), ..etc)
+- **Rich Context Menu**: Access additional options for each result (Surah or Ayah: Copy text, open in [Quran.com](https://quran.com/) website, read translation [there](https://quran.com/), ..etc)
 
 Check the [Usage heading](#usage) for a detailed feature showcase
 

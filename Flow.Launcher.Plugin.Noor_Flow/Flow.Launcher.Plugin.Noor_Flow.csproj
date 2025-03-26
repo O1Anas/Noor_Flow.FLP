@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <Configuration>Release</Configuration>  
-    <OutputPath>C:\Users\MMG\AppData\Roaming\FlowLauncher\Plugins\Noor_flow.FLP dev\</OutputPath>
+    <OutputPath>C:\Users\MMG\AppData\Roaming\FlowLauncher\Plugins\Flow.Launcher.Plugin.Noor_Flow\</OutputPath>
     <TargetFramework>net7.0-windows</TargetFramework>
     <AssemblyName>Flow.Launcher.Plugin.Noor_Flow</AssemblyName>
     <PackageId>Flow.Launcher.Plugin.Noor_Flow</PackageId>
@@ -20,14 +21,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="plugin.json">
+    <None Include="plugin.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Images\app.png">
+    <None Include="Images\app.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Data\normalized_quran.json">
+    <None Include="Data\normalized_quran.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="plugin.json" DestinationFolder="$(OutputPath)" />
+    <Copy SourceFiles="Images\app.png" DestinationFolder="$(OutputPath)Images\" />
+    <Copy SourceFiles="Data\normalized_quran.json" DestinationFolder="$(OutputPath)Data\" />
+  </Target>
+  
 </Project>

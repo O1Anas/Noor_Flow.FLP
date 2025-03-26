@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-
   <PropertyGroup>
+    <Configuration>Release</Configuration>  
+    <OutputPath>C:\Users\MMG\AppData\Roaming\FlowLauncher\Plugins\Noor_flow.FLP dev\</OutputPath>
     <TargetFramework>net7.0-windows</TargetFramework>
     <AssemblyName>Flow.Launcher.Plugin.Noor_Flow</AssemblyName>
     <PackageId>Flow.Launcher.Plugin.Noor_Flow</PackageId>
     <Authors>O1Anas</Authors>
-    <PackageProjectUrl>https://github.com/O1Anas/Flow.Launcher.Plugin.Noor_Flow</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/O1Anas/Flow.Launcher.Plugin.Noor_Flow</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/O1Anas/Noor_Flow.FLP</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/O1Anas/Noor_Flow.FLP</RepositoryUrl>
     <PackageTags>flow-launcher flow-plugin</PackageTags>
     <UseWPF>true</UseWPF>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -30,5 +30,4 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>

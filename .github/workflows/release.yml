@@ -29,7 +29,7 @@ jobs:
         id: extract-release-notes
         uses: ffurrer2/extract-release-notes@v2
         with:
-          changelog_file: '.github/CHANGELOG.md'
+          changelog_file: 'Flow.Launcher.Plugin.Noor_Flow/CHANGELOG.md'
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
@@ -39,12 +39,12 @@ jobs:
       - name: Restore dependencies
         run: |
           cd Flow.Launcher.Plugin.Noor_Flow
-          dotnet restore Flow.Launcher.Plugin.Noor.csproj
+          dotnet restore Flow.Launcher.Plugin.Noor_Flow.csproj
 
       - name: Build and publish
         run: |
           cd Flow.Launcher.Plugin.Noor_Flow
-          dotnet publish Flow.Launcher.Plugin.Noor.csproj -c Release -r win-x64 --no-self-contained -o publish
+          dotnet publish Flow.Launcher.Plugin.Noor_Flow.csproj -c Release -r win-x64 --no-self-contained -o publish
           Compress-Archive -Path publish\* -DestinationPath Flow.Launcher.Plugin.Noor_Flow.zip
 
       - name: Create GitHub Release

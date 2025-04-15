@@ -15,7 +15,7 @@ Noor Flow is a powerful Flow Launcher plugin designed to ease the search and ext
 Check the [Usage heading](#usage) for a detailed feature showcase
 
 ## Installation
-1. Install latest version of [Flow Launcher here](https://github.com/Flow-Launcher/Flow.Launcher).
+1. Install the latest version of [Flow Launcher here](https://github.com/Flow-Launcher/Flow.Launcher).
 2. Then proceed with one of the following installation methods:
 
 **Recommended**:

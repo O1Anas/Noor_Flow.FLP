@@ -37,7 +37,7 @@ Activate the plugin using the default keyword `noor` followed by your search:
 - `noor rahman` - Search for Surah Ar-Rahman using transliteration.
 - `noor 2:255` - Show Ayat al-Kursi (Surah Al-Baqarah, ayah 255).
 - `noor اللَّهُ لا إلَهَ إلّا هُوَ الحَيُّ` - Show Ayat al-Kursi (Surah Al-Baqarah, ayah 255).
-- `noor قل هو الله أحد` - Show Ayat al-Kursi (Surah Al-Baqarah, ayah 255).
+- `noor قل هو الله أحد` - Show ayahs containing the text "قل هو الله أحد" (Only Ayah 1 from surah Al-Ikhlas in this case).
 
 **Note**: Fuzzy search is an implemented feature. For example: even if you search for `بسماللهالرحمنالرحيم`, your search will match the result: `بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ`
 
